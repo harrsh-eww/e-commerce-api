@@ -6,7 +6,9 @@ export class AppController {
     constructor(private readonly appService: AppService) {}
 
     @Get()
-    pingServer(): string {
+    pingServer(): {
+        message: string;
+    } {
         return this.appService.pingServer();
     }
 }
